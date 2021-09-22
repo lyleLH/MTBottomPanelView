@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'MTBottomPanelView_Example' do
+  pod 'MTBottomPanelView', :path => '../'
+
+  target 'MTBottomPanelView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
