@@ -38,7 +38,7 @@
     if(!_contentView){
         _contentView = [[UIView alloc] initWithFrame:self.bounds];
         [self addSubview:_contentView];
-        [_contentView mt_addRounderCornerWithRadius:15 size:self.bounds.size];
+//        [_contentView mt_addRounderCornerWithRadius:15 size:self.bounds.size];
         _contentView.layer.masksToBounds = YES;
         _contentView.clipsToBounds = YES;
     }
@@ -91,25 +91,32 @@
 
 
 - (void)updatePanelViewInIndexPath:(id)status data:(id)data {
-    
-    if(!(_currentStatus == status)) {
-        _currentStatus = status;
-        CGFloat height;
-        if([self.delegate respondsToSelector:@selector(heightForPanelViewWithIndexPath:)]){
-            height =  [self.delegate heightForPanelViewWithIndexPath:status];
-            [self showAnimationWithViewHeight:height];
-        }
-    }
-    [self.currentStatusView removeFromSuperview];
-    
+       
     if([self.delegate respondsToSelector:@selector(contentViewForPanelViewWithIndexPath:)]){
-      self.currentStatusView  =  [self.delegate contentViewForPanelViewWithIndexPath:status];
+        if(!(_currentStatus == status)) {
+            _currentStatus = status;
+            CGFloat height;
+            if([self.delegate respondsToSelector:@selector(heightForPanelViewWithIndexPath:)]){
+                height =  [self.delegate heightForPanelViewWithIndexPath:status];
+                [self showAnimationWithViewHeight:height];
+            }
+        }
+        [self.currentStatusView removeFromSuperview];
+        UIView * contenShowView = [self.delegate contentViewForPanelViewWithIndexPath:status];
+        if(contenShowView){
+            self.currentStatusView  =  [self.delegate contentViewForPanelViewWithIndexPath:status];
+              [self.contentView setFrame:self.bounds];
+              [self.contentView addSubview:self.currentStatusView];
+              [self.currentStatusView mas_makeConstraints:^(MASConstraintMaker *make) {
+                  make.to(self.contentView).left(0).right(0).top(0).bottom(0);
+              }];
+        }else{
+            
+        }
+    }else{
+        
     }
-    [self.contentView setFrame:self.bounds];
-    [self.contentView addSubview:self.currentStatusView];
-    [self.currentStatusView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.to(self.contentView).left(0).right(0).top(0).bottom(0);
-    }];
+    
 }
 
 
