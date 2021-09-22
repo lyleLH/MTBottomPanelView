@@ -41,4 +41,6 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
    s.dependency 'MTCategoryComponent'
    s.dependency 'pop'
+   s.dependency 'MTLayoutUtilityComponent'
+   
 end

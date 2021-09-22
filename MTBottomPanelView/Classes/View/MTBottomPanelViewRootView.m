@@ -14,8 +14,11 @@
 #import <MTCategoryComponent/MTCategoryComponentHeader.h>
 #import <pop/POP.h>
 
-@interface MTBottomPanelViewRootView ()
+#import <MTLayoutUtilityComponent/MTLayoutUtilityComponentHeader.h>
 
+
+@interface MTBottomPanelViewRootView ()
+@property (nonatomic,strong)UIView * contentView;
 @property (nonatomic,strong)UIView * currentStatusView;
 @property (nonatomic,strong)id currentStatus;
 @property (nonatomic,strong)NSNumber * totalNumberOfPanel;
@@ -31,20 +34,26 @@
     return _totalNumberOfPanel;
 }
 
+- (UIView *)contentView {
+    if(!_contentView){
+        _contentView = [[UIView alloc] initWithFrame:self.bounds];
+        [self addSubview:_contentView];
+        [_contentView mt_addRounderCornerWithRadius:15 size:self.bounds.size];
+        _contentView.layer.masksToBounds = YES;
+        _contentView.clipsToBounds = YES;
+    }
+    return _contentView;
+}
+
 - (instancetype)init {
     if(self ==[super init]){
-        self.backgroundColor = [UIColor whiteColor];
-       
+        self.backgroundColor = [UIColor clearColor];
         self.layer.shadowColor = [UIColor blackColor].CGColor;
         self.layer.shadowOffset = CGSizeMake(0,5);
         self.layer.shadowOpacity = 1;
         self.layer.shadowRadius = 10;
-//        self.layer.cornerRadius = 1.0;
-        
-  
-        [self mt_addRounderCornerWithRadius:15 size:self.bounds.size];
-        self.layer.masksToBounds = NO;
  
+        self.layer.masksToBounds = NO;
     }
     return self;
 }
@@ -56,10 +65,6 @@
 }
 
 - (void)showAnimationWithViewHeight:(CGFloat)height {
-
-
-    
-   
     CGFloat horizonalMargin = 0.0;
     BOOL isFromTabbar = NO;
     if([self.delegate respondsToSelector:@selector(showWithTabbar)]){
@@ -83,19 +88,6 @@
 }
 
 
-- (BOOL)isIPhoneNotchScreen{
-    BOOL result = NO;
-    if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
-        return result;
-    }
-    if (@available(iOS 11.0, *)) {
-        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
-        if (mainWindow.safeAreaInsets.bottom > 0.0) {
-            result = YES;
-        }
-    }
-    return result;
-}
 
 
 - (void)updatePanelViewInIndexPath:(id)status data:(id)data {
@@ -113,9 +105,26 @@
     if([self.delegate respondsToSelector:@selector(contentViewForPanelViewWithIndexPath:)]){
       self.currentStatusView  =  [self.delegate contentViewForPanelViewWithIndexPath:status];
     }
-    [self addSubview:self.currentStatusView];
+    [self.contentView setFrame:self.bounds];
+    [self.contentView addSubview:self.currentStatusView];
+    [self.currentStatusView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.to(self.contentView).left(0).right(0).top(0).bottom(0);
+    }];
 }
 
 
+- (BOOL)isIPhoneNotchScreen{
+    BOOL result = NO;
+    if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
+        return result;
+    }
+    if (@available(iOS 11.0, *)) {
+        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+        if (mainWindow.safeAreaInsets.bottom > 0.0) {
+            result = YES;
+        }
+    }
+    return result;
+}
 
 @end
