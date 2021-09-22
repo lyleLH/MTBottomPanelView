@@ -7,9 +7,10 @@
 //
 
 #import "MTViewController.h"
-
+#import <MTBottomPanelView/MTBottomPanelViewModuleHeader.h>
 @interface MTViewController ()
 
+@property (nonatomic,strong)MTBottomPanelViewModule *panelViewModule;
 @end
 
 @implementation MTViewController
@@ -18,12 +19,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+//    self.view.backgroundColor = [UIColor grayColor];
+    MTBottomPanelViewModule * module = [[MTBottomPanelViewModule alloc] init];
+    self.panelViewModule = module;
+    [module showPannelInVc:self];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)statusChangButtons:(UIButton *)sender {
+    NSInteger tag  = sender.tag -100;
+    [self.panelViewModule userStatusChanged:[NSNumber numberWithInt:tag]];
 }
 
 @end

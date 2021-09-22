@@ -1,0 +1,6 @@
+framework module Pods_MTBottomPanelView_Example {
+  umbrella header "Pods-MTBottomPanelView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

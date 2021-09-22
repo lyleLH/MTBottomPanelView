@@ -1,8 +1,12 @@
+source 'https://github.com/lyleLH/MTSpecs.git'
+source 'https://cdn.cocoapods.org/'                  #官方仓库地址 cdn
+
 use_frameworks!
 
 platform :ios, '9.0'
 
 target 'MTBottomPanelView_Example' do
+  pod 'LookinServer', :configurations => ['Debug']
   pod 'MTBottomPanelView', :path => '../'
 
   target 'MTBottomPanelView_Tests' do

@@ -32,11 +32,13 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'MTBottomPanelView/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'MTBottomPanelView' => ['MTBottomPanelView/Assets/*.png']
-  # }
-
+  s.resource_bundles = {
+    'MTBottomPanelView' => ['MTBottomPanelView/Assets/*.xcassets']
+  }
+  
+ 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'MTCategoryComponent'
+   s.dependency 'pop'
 end

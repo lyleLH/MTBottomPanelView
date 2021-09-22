@@ -1,0 +1,6 @@
+framework module MTBottomPanelView {
+  umbrella header "MTBottomPanelView-umbrella.h"
+
+  export *
+  module * { export * }
+}
