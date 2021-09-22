@@ -23,5 +23,16 @@
  Module delegate for the BottomPanelView module.
  */
 @protocol MTBottomPanelViewModuleDelegate <NSObject>
+- (BOOL)showWithTabbar;
+- (UIView *)contentViewForPanelViewWithIndexPath:(NSIndexPath *)indexPath ;
+
+- (CGFloat) heightForPanelViewWithIndexPath:(NSIndexPath *)indexPath ;
+
+@end
+
+
+@protocol MTBottomPanelViewModuleDatasource <NSObject>
+
+- (NSInteger)numberOfContentViewsInPanel:(UIView *)panelView ;
 
 @end

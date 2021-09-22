@@ -19,7 +19,7 @@
 
 @implementation MTBottomPanelViewWireframe
 
-- (void)presentSelfFromViewController:(UIViewController *)viewController
+- (void)presentSelfFromViewController:(UIViewController *)viewController andDelegate:(id)delegate andDatasource:(id)dataSource
 {
     // save reference
 //    self.viewController = [[MTBottomPanelViewViewController alloc] initWithNibName:@"MTBottomPanelViewViewController" bundle:nil];
@@ -30,7 +30,8 @@
     // view <-> presenter
     self.presenter.userInterface = self.panelView;
     self.panelView.eventHandler = self.presenter;
-
+    self.panelView.delegate = delegate;
+    self.panelView.datasource = dataSource;
     // present controller
     // *** present self with RootViewController
     [viewController.view addSubview:self.panelView];

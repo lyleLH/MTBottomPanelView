@@ -12,7 +12,7 @@
 + (UIImage *)mt_imageWithName:(NSString*)name inBundle:(NSString*)bundleName {
     static NSBundle * bundle = nil;
     if(!bundle){
-        NSString * path =    [[NSBundle bundleForClass:NSClassFromString(@"DGMapModule")] pathForResource:bundleName ofType:@"bundle"];
+        NSString * path =    [[NSBundle bundleForClass:NSClassFromString(@"MTBottomPanelView")] pathForResource:bundleName ofType:@"bundle"];
         bundle = [NSBundle bundleWithPath:path];
     }
     if(!bundle){

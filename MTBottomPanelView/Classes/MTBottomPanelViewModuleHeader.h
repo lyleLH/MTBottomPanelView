@@ -9,5 +9,5 @@
 #define MTBottomPanelViewModuleHeader_h
 
 #import "MTBottomPanelViewModule.h"
-
+#import "MTBottomPanelViewChildView.h"
 #endif /* MTBottomPanelViewModuleHeader_h */

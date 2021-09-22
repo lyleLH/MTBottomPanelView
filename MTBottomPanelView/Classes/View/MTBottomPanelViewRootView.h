@@ -18,8 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) id<MTBottomPanelViewModuleInterface> eventHandler;
 
-// *** add UI events here
-
+@property (nonatomic, strong) id<MTBottomPanelViewModuleDelegate> delegate;
+ 
+@property (nonatomic, strong) id<MTBottomPanelViewModuleDatasource> datasource;
 
 @end
 

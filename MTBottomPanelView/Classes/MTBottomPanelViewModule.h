@@ -6,12 +6,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MTBottomPanelViewModuleInterface.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MTBottomPanelViewModule : NSObject
+
+@property (nonatomic, strong) id<MTBottomPanelViewModuleDelegate> delegate;
+ 
+@property (nonatomic, strong) id<MTBottomPanelViewModuleDatasource> datasource;
+
 - (void)showPannelInVc:(UIViewController *)vc ;
-- (void)userStatusChanged:(id)status ;
+- (void)updateStatusinIndex:(NSInteger)index ;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

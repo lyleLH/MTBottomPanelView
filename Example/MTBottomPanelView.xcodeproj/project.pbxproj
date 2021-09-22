@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09AFEF0970E926DBFC84CAC2 /* Pods_MTBottomPanelView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF5006AF3A8EB590ACAFAE2 /* Pods_MTBottomPanelView_Example.framework */; };
+		0B2A6DE63B73EAD8BBF062FA /* libPods-MTBottomPanelView_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFA085906D19591DC30AAF4 /* libPods-MTBottomPanelView_Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -22,8 +22,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		7D7F838BBA414AD7C0B562C5 /* libPods-MTBottomPanelView_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE5886E2B23A23B485033BA /* libPods-MTBottomPanelView_Example.a */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		FB2713FC93AC4A88ACD6F12E /* Pods_MTBottomPanelView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C3C9A8352CD0A9664FDBCB /* Pods_MTBottomPanelView_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		11133A4A1E141D812FC34282 /* MTBottomPanelView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MTBottomPanelView.podspec; path = ../MTBottomPanelView.podspec; sourceTree = "<group>"; };
 		28817FF948D7558867E54EC5 /* Pods-MTBottomPanelView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTBottomPanelView_Example.debug.xcconfig"; path = "Target Support Files/Pods-MTBottomPanelView_Example/Pods-MTBottomPanelView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		30C3C9A8352CD0A9664FDBCB /* Pods_MTBottomPanelView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTBottomPanelView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		433990B5594DC43439F5ACFF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		473DD3A29B9987A72029038F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MTBottomPanelView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTBottomPanelView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,10 +61,11 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7CF5006AF3A8EB590ACAFAE2 /* Pods_MTBottomPanelView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTBottomPanelView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FFA085906D19591DC30AAF4 /* libPods-MTBottomPanelView_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTBottomPanelView_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E1204AD157870D8FAFA3A76 /* Pods-MTBottomPanelView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTBottomPanelView_Tests.release.xcconfig"; path = "Target Support Files/Pods-MTBottomPanelView_Tests/Pods-MTBottomPanelView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8EF16B79BF62F5AD82D657CC /* Pods-MTBottomPanelView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTBottomPanelView_Example.release.xcconfig"; path = "Target Support Files/Pods-MTBottomPanelView_Example/Pods-MTBottomPanelView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		ADE5886E2B23A23B485033BA /* libPods-MTBottomPanelView_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTBottomPanelView_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE70200E86EFBC9ADD3868FF /* Pods-MTBottomPanelView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTBottomPanelView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MTBottomPanelView_Tests/Pods-MTBottomPanelView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				09AFEF0970E926DBFC84CAC2 /* Pods_MTBottomPanelView_Example.framework in Frameworks */,
+				7D7F838BBA414AD7C0B562C5 /* libPods-MTBottomPanelView_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				FB2713FC93AC4A88ACD6F12E /* Pods_MTBottomPanelView_Tests.framework in Frameworks */,
+				0B2A6DE63B73EAD8BBF062FA /* libPods-MTBottomPanelView_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +123,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				7CF5006AF3A8EB590ACAFAE2 /* Pods_MTBottomPanelView_Example.framework */,
-				30C3C9A8352CD0A9664FDBCB /* Pods_MTBottomPanelView_Tests.framework */,
+				ADE5886E2B23A23B485033BA /* libPods-MTBottomPanelView_Example.a */,
+				7FFA085906D19591DC30AAF4 /* libPods-MTBottomPanelView_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				74CEEB71A01175062F29E62E /* [CP] Embed Pods Frameworks */,
+				4DBE8944916695D26D626075 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,34 +317,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		74CEEB71A01175062F29E62E /* [CP] Embed Pods Frameworks */ = {
+		4DBE8944916695D26D626075 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MTBottomPanelView_Example/Pods-MTBottomPanelView_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/LookinServer/LookinServer.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MTBottomPanelView/MTBottomPanelView.framework",
-				"${BUILT_PRODUCTS_DIR}/MTCategoryComponent/MTCategoryComponent.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
-				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-MTBottomPanelView_Example/Pods-MTBottomPanelView_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MTBottomPanelView/MTBottomPanelView.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MTBottomPanelView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MTCategoryComponent.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MTBottomPanelView.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MTBottomPanelView_Example/Pods-MTBottomPanelView_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MTBottomPanelView_Example/Pods-MTBottomPanelView_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B7A4033DCA1F01AC5B8CC69A /* [CP] Check Pods Manifest.lock */ = {

@@ -7,7 +7,7 @@
 
 #import "MTBottomPanelViewChildView.h"
 #import <MTCategoryComponent/MTCategoryComponentHeader.h>
-
+#import "UIImage+MTBottomPanelViewBundleImage.h"
 @interface MTBottomPanelViewChildView ()
 
 @end
@@ -19,6 +19,9 @@
 + (MTBottomPanelViewChildView *)createPanelContenViewWithStatus:(id)status  {
     NSNumber * statuNum = (NSNumber*)status;
     MTBottomPanelViewChildView * childView = [[MTBottomPanelViewChildView alloc] init];
+    UIImage * image = [UIImage mt_imageWithName:@"icon_current_location" inBundle:@"MTBottomPanelView"];
+    UIImageView * imageView =  [[UIImageView alloc] initWithImage:image];
+    [childView addSubview:imageView];
     switch (statuNum.intValue) {
         case 1:
         {
@@ -36,6 +39,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.backgroundColor = [UIColor mt_randomColor];
+   
 }
 
 

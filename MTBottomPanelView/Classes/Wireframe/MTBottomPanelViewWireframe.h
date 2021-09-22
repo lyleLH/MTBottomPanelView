@@ -25,6 +25,6 @@
 @property (nonatomic, strong) MTBottomPanelViewPresenter *presenter;
 
 // initialization
-- (void)presentSelfFromViewController:(UIViewController *)viewController;
+- (void)presentSelfFromViewController:(UIViewController *)viewController andDelegate:(id)delegate andDatasource:(id)dataSource ;
 
 @end

@@ -13,6 +13,6 @@
  */
 @protocol MTBottomPanelViewViewInterface <NSObject>
 
-- (void)updatePanelViewStatus:(id)status data:(id)data;
+- (void)updatePanelViewInIndexPath:(NSIndexPath *)indexPath data:(id)data;
 
 @end
