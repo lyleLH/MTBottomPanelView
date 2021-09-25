@@ -48,7 +48,7 @@
 - (instancetype)init {
     if(self ==[super init]){
         self.backgroundColor = [UIColor clearColor];
-        self.layer.shadowColor = [UIColor blackColor].CGColor;
+        self.layer.shadowColor = [UIColor mt_colorWithHex:0x000000 alpha:0.1].CGColor;
         self.layer.shadowOffset = CGSizeMake(0,5);
         self.layer.shadowOpacity = 1;
         self.layer.shadowRadius = 10;
