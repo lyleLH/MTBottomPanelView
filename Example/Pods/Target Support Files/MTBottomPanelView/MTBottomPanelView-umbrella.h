@@ -12,9 +12,9 @@
 
 #import "MTBottomPanelViewDataManager.h"
 #import "MTBottomPanelViewInteractor.h"
-#import "MTBottomPanelViewModuleInterface.h"
 #import "MTBottomPanelViewModule.h"
 #import "MTBottomPanelViewModuleHeader.h"
+#import "MTBottomPanelViewModuleInterface.h"
 #import "MTBottomPanelViewPresenter.h"
 #import "UIImage+MTBottomPanelViewBundleImage.h"
 #import "MTBottomPanelViewChildView.h"
